@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+}
+
+html {
+    height: 100%;
+    background: linear-gradient(0deg, #1B2735 0%, #090A0F 100%);
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+}
+
+.nav li:hover::after {
+    content: "";
+    height: 2px;
+    width: 96%;
+    transition: .5s ease-in-out;
+    background-color: white;
+    display: block;
+}
+
+.nav li::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    transition: .5s ease-in-out;
+    background-color: white;
+    display: block;
+
+}
+
+ul {
+    padding-top: 1%;
+    height: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    letter-spacing: 0.2rem;
+    margin-left: 0.8rem;
+}
+
+
+.txt {
+    letter-spacing: 0.2rem;
+    position: absolute;
+    font-size: 6rem;
+    bottom: 5%;
+    left: 4%;
+}
+
+
+@media screen and (max-width: 800px) {
+
+        .txt p{
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .nav{
+            font-size: 1rem;
+        }
+
+        ul{
+            gap: 4%;
+        }
+    }
+@media screen and (max-width: 440px) {
+
+    .txt p{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .nav{
+        font-size: 0.8rem;
+    }
+
+    ul{
+        gap: 4%;
+    }
+}

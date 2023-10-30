@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+
+}
+
+html {
+    background: linear-gradient(0deg, #1B2735 0%, #090A0F 100%) no-repeat;
+    background-size: cover;
+
+}
+
+
+.nav {
+    display: flex;
+    width: 100%;
+}
+
+.nav li:hover::after {
+    content: "";
+    height: 2px;
+    width: 96%;
+    transition: .5s ease-in-out;
+    background-color: white;
+    display: block;
+}
+
+.nav li::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    transition: .5s ease-in-out;
+    background-color: white;
+    display: block;
+
+}
+
+ul {
+    padding-top: 1%;
+    height: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    letter-spacing: 0.2rem;
+    margin-left: 0.8rem;
+}
+
+/*content*/
+
+h2 {
+    letter-spacing: 0.2rem;
+    margin-left: 0.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.project-outside-card-container h4{
+    font-weight: 400;
+}
+
+h5{
+    margin-top: 3rem;
+}
+
+.project-outside-card-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+
+}
+
+.project-outside-child-card {
+    flex-direction: row;
+    margin-top: 1rem;
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20%;
+    text-align: center;
+}
+
+.project-outside-child-card p {
+    margin-top: 30px;
+}
+
+
+.project-outside-child-card img {
+    border-radius: 10px;
+}
+
+.project {
+    animation: card-glow-out 0.4s;
+    animation-direction: reverse;
+}
+
+.project:hover {
+    cursor: pointer;
+    scale: 1.1;
+    animation: card-glow-in 0.8s;
+    box-shadow: 1px 1px 20px white;
+}
+
+
+@keyframes card-glow-in {
+    0% {
+        scale: 1;
+        box-shadow: 0 0 0 white;
+
+    }
+
+    100% {
+        scale: 1.1;
+        box-shadow: 1px 1px 20px white;
+    }
+}
+
+@keyframes card-glow-out {
+    0% {
+        scale: 1;
+        box-shadow: 0 0 0 white;
+
+    }
+
+    100% {
+        scale: 1.1;
+        box-shadow: 1px 1px 20px white;
+    }
+}
+
+/*The cards*/
+
+#projectInsideCardContainer1, #projectInsideCardContainer2, #projectInsideCardContainer3{
+    width: 100%;
+    height: 100%;
+    animation: project-go-in 0.5s;
+}
+
+@keyframes project-go-in{
+    0%{
+        opacity: 0.0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.goBackInsideCardToOutsideCard{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    cursor: pointer;
+}
+
+.projectInsideCard{
+    z-index: 10;
+    position: fixed;
+    height: 100%;
+    width: 91%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    box-shadow: 0 3px 6px  black;
+    text-align: center;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/*inside of the cards*/
+
+.projectInsideCard h3{
+    letter-spacing: 10px;
+    margin-left: 10px;
+    margin-top: 2rem;
+}
+
+.projectDescription {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.projectDescription h4{
+    width: 20%;
+    margin: 1rem;
+}
+
+.projectInsideCard button{
+    color: white;
+    background-color: black;
+    margin-top: 20px;
+    border-style: solid;
+    border-radius: 90px;
+    padding: 5px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+video{
+    width: 70%;
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+
+    .nav{
+        font-size: 1rem;
+    }
+
+    ul{
+        gap: 4%;
+    }
+}
+@media screen and (max-width: 440px) {
+
+    .nav{
+        font-size: 0.8rem;
+    }
+
+    ul{
+        gap: 4%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+   html{ height: 100%;}
+
+
+}
+
+@media screen and (max-width: 1400px) {
+    .project-outside-child-card div{
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+    .project-outside-card-container h4{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .projectDescription{
+        flex-direction: column;
+    }
+    .projectDescription h4{
+        width: 60%;
+    }
+}
