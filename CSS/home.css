@@ -37,7 +37,7 @@ body {
 .nav li::after {
     content: "";
     height: 2px;
-    width: 0%;
+    width: 0;
     transition: .5s ease-in-out;
     background-color: white;
     display: block;

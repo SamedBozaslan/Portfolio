@@ -8,13 +8,15 @@
     text-decoration: none;
     color: white;
     list-style-type: none;
-
 }
 
 html {
     background: linear-gradient(0deg, #1B2735 0%, #090A0F 100%) no-repeat;
     background-size: cover;
+}
 
+body {
+    height: 100%;
 }
 
 
@@ -35,7 +37,7 @@ html {
 .nav li::after {
     content: "";
     height: 2px;
-    width: 0%;
+    width: 0;
     transition: .5s ease-in-out;
     background-color: white;
     display: block;
@@ -90,6 +92,10 @@ h5{
     justify-content: center;
     gap: 20%;
     text-align: center;
+}
+
+.project-outside-child-card div{
+    margin-bottom: 5rem;
 }
 
 .project-outside-child-card p {
@@ -245,11 +251,7 @@ video{
     }
 }
 
-@media screen and (min-width: 1400px) {
-   html{ height: 100%;}
 
-
-}
 
 @media screen and (max-width: 1400px) {
     .project-outside-child-card div{
