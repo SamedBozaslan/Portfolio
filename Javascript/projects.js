@@ -1,6 +1,7 @@
 let projectCard1 = document.getElementById('project-outside-card-1');
 let projectCard2 = document.getElementById('project-outside-card-2');
 let projectCard3 = document.getElementById('project-outside-card-3');
+let projectCard4 = document.getElementById('project-outside-card-4');
 
 let videoProject1 = document.getElementById('videoProject1')
 let videoProject2 = document.getElementById('videoProject2')
@@ -9,10 +10,13 @@ let videoProject3 = document.getElementById('videoProject3')
 let button1 = document.getElementById('returnToPageButton1')
 let button2 = document.getElementById('returnToPageButton2')
 let button3 = document.getElementById('returnToPageButton3')
+let button4 = document.getElementById('returnToPageButton4')
+
 
 let projectOutsideCard1 = document.getElementById('projectInsideCardContainer1');
 let projectOutsideCard2 = document.getElementById('projectInsideCardContainer2');
 let projectOutsideCard3 = document.getElementById('projectInsideCardContainer3');
+let projectOutsideCard4 = document.getElementById('projectInsideCardContainer4');
 
 
 let closeProject = document.getElementsByClassName('goBackInsideCardToOutsideCard');
@@ -23,6 +27,7 @@ let closeProject = document.getElementsByClassName('goBackInsideCardToOutsideCar
 projectOutsideCard1.hidden = true;
 projectOutsideCard2.hidden = true;
 projectOutsideCard3.hidden = true;
+projectOutsideCard4.hidden = true;
 
 
 projectCard1.onclick = function(){
@@ -37,6 +42,9 @@ projectCard3.onclick = function(){
     projectOutsideCard3.hidden = false;
 }
 
+projectCard4.onclick = function(){
+    projectOutsideCard4.hidden = false;
+}
 
 closeProject[0].onclick = function (){
     projectOutsideCard1.hidden = true;
@@ -73,3 +81,15 @@ button3.onclick = function (){
     videoProject3.pause();
     videoProject3.currentTime = 0;
 }
+
+closeProject[3].onclick = function () {
+    projectOutsideCard4.hidden = true;
+}
+
+button4.onclick = function () {
+    projectOutsideCard4.hidden = true;
+}
+
+
+
+
